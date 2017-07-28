@@ -5,6 +5,8 @@ ENV SITESPEED_IO_BROWSERTIME__CHROME__ARGS no-sandbox
 
 RUN addgroup --system --gid 2718 ppoker && \
     adduser --system --uid 2718 --gid 2718 --home /usr/src/ppoker ppoker
+    
+RUN usermod -aG sudo ppoker
 
 USER ppoker
 
