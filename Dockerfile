@@ -8,6 +8,8 @@ RUN addgroup --system --gid 2718 ppoker && \
     
 RUN usermod -aG sudo ppoker
 
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
 ## This is to avoid click the OK button
 RUN mkdir -m 0750 /root/.android
 ADD docker/adb/insecure_shared_adbkey /root/.android/adbkey
