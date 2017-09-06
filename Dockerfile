@@ -15,7 +15,7 @@ RUN mkdir -m 0750 /root/.android
 ADD docker/adb/insecure_shared_adbkey /root/.android/adbkey
 ADD docker/adb/insecure_shared_adbkey.pub /root/.android/adbkey.pub
 
-USER ppoker
+#USER ppoker
 
 #RUN mkdir -p /usr/src/ppoker
 WORKDIR /usr/src/app
